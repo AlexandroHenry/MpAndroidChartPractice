@@ -57,6 +57,10 @@ class HomeFragment : Fragment() {
         binding.combindedChartBtn.setOnClickListener {
             findNavController().navigate(R.id.action_HomeFragment_to_combinedChartFragment)
         }
+
+        binding.scatterChartBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_scatterChartFragment)
+        }
     }
 
     override fun onDestroyView() {

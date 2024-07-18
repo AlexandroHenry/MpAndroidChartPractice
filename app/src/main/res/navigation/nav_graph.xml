@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_HomeFragment_to_combinedChartFragment"
             app:destination="@id/combinedChartFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_scatterChartFragment"
+            app:destination="@id/scatterChartFragment" />
     </fragment>
 
     <fragment
@@ -68,5 +71,10 @@
         android:name="com.ret.mpandroidchartpractice.view.CombinedChartFragment"
         android:label="fragment_combined_chart"
         tools:layout="@layout/fragment_combined_chart" />
+    <fragment
+        android:id="@+id/scatterChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.ScatterChartFragment"
+        android:label="fragment_scatter_chart"
+        tools:layout="@layout/fragment_scatter_chart" />
 
 </navigation>
