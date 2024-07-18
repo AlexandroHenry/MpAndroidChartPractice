@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.ret.mpandroidchartpractice.view.HomeFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_LineChartFragment"
+            app:destination="@id/LineChartFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_cubicLineChartFragment"
+            app:destination="@id/cubicLineChartFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_pieFragment"
+            app:destination="@id/pieFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_barChartFragment"
+            app:destination="@id/barChartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LineChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.LineChartFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_line_chart"/>
+    <fragment
+        android:id="@+id/cubicLineChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.CubicLineChartFragment"
+        android:label="fragment_cubic_line_chart"
+        tools:layout="@layout/fragment_cubic_line_chart" />
+    <fragment
+        android:id="@+id/pieFragment"
+        android:name="com.ret.mpandroidchartpractice.view.PieFragment"
+        android:label="fragment_pie"
+        tools:layout="@layout/fragment_pie" />
+    <fragment
+        android:id="@+id/barChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.BarChartFragment"
+        android:label="fragment_bar_chart"
+        tools:layout="@layout/fragment_bar_chart" />
+
+</navigation>
