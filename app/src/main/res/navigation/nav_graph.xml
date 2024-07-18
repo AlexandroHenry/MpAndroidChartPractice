@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_HomeFragment_to_bubbleChartFragment"
             app:destination="@id/bubbleChartFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_radarChartFragment"
+            app:destination="@id/radarChartFragment" />
     </fragment>
 
     <fragment
@@ -92,5 +95,10 @@
         android:name="com.ret.mpandroidchartpractice.view.BubbleChartFragment"
         android:label="fragment_bubble_chart"
         tools:layout="@layout/fragment_bubble_chart" />
+    <fragment
+        android:id="@+id/radarChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.RadarChartFragment"
+        android:label="fragment_radar_chart"
+        tools:layout="@layout/fragment_radar_chart" />
 
 </navigation>

@@ -69,6 +69,10 @@ class HomeFragment : Fragment() {
         binding.bubbleChartBtn.setOnClickListener {
             findNavController().navigate(R.id.action_HomeFragment_to_bubbleChartFragment)
         }
+
+        binding.radarChartBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_radarChartFragment)
+        }
     }
 
     override fun onDestroyView() {
