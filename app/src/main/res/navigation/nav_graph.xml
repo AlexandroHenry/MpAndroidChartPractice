@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_HomeFragment_to_scatterChartFragment"
             app:destination="@id/scatterChartFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_candleStickChartFragment"
+            app:destination="@id/candleStickChartFragment" />
     </fragment>
 
     <fragment
@@ -76,5 +79,10 @@
         android:name="com.ret.mpandroidchartpractice.view.ScatterChartFragment"
         android:label="fragment_scatter_chart"
         tools:layout="@layout/fragment_scatter_chart" />
+    <fragment
+        android:id="@+id/candleStickChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.CandleStickChartFragment"
+        android:label="fragment_candle_stick_chart"
+        tools:layout="@layout/fragment_candle_stick_chart" />
 
 </navigation>
