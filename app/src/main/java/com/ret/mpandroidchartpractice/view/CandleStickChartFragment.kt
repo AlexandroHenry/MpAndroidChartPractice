@@ -31,7 +31,7 @@ class CandleStickChartFragment : Fragment() {
 
     fun setupCandleStickChart() {
         val entries = ArrayList<CandleEntry>()
-        for (i in 0 until 10) {
+        for (i in 0 until 20) {
             val high = (Math.random() * 100).toFloat() + 10
             val low = (Math.random() * 100).toFloat()
             val open = (Math.random() * 100).toFloat()
@@ -57,7 +57,7 @@ class CandleStickChartFragment : Fragment() {
             description.text = "CandleStick Chart"
             setPinchZoom(true)
             setDrawGridBackground(false)
-            animateY(1500)
+            animateY(100)
             invalidate()
         }
     }

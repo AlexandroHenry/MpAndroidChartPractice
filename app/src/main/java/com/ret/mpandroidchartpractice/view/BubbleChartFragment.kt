@@ -1,60 +1,55 @@
 package com.ret.mpandroidchartpractice.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import com.github.mikephil.charting.data.BubbleData
+import com.github.mikephil.charting.data.BubbleDataSet
+import com.github.mikephil.charting.data.BubbleEntry
 import com.ret.mpandroidchartpractice.R
+import com.ret.mpandroidchartpractice.databinding.FragmentBarChartBinding
+import com.ret.mpandroidchartpractice.databinding.FragmentBubbleChartBinding
+import com.ret.mpandroidchartpractice.databinding.FragmentCandleStickChartBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [BubbleChartFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BubbleChartFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentBubbleChartBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bubble_chart, container, false)
+        _binding = FragmentBubbleChartBinding.inflate(inflater, container, false)
+
+        setupBubbleChart()
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment BubbleChartFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            BubbleChartFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    fun setupBubbleChart() {
+        val entries = ArrayList<BubbleEntry>()
+        for (i in 0 until 20) {
+            entries.add(BubbleEntry(i.toFloat(), (Math.random() * 100).toFloat(), (Math.random() * 10).toFloat()))
+        }
+
+        val bubbleDataSet = BubbleDataSet(entries, "Bubble Data").apply {
+            color = ContextCompat.getColor(requireContext(), R.color.red)
+            setDrawValues(true)
+            valueTextColor = ContextCompat.getColor(requireContext(), R.color.black)
+            valueTextSize = 10f
+        }
+
+        val data = BubbleData(bubbleDataSet)
+        binding.bubbleChart.apply {
+            this.data = data
+            description.text = "Bubble Chart"
+            setPinchZoom(true)
+            setDrawGridBackground(false)
+            animateY(1500)
+            invalidate()
+        }
     }
 }

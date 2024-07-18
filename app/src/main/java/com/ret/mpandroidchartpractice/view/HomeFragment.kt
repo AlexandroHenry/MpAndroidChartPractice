@@ -65,6 +65,10 @@ class HomeFragment : Fragment() {
         binding.candleStickChartBtn.setOnClickListener {
             findNavController().navigate(R.id.action_HomeFragment_to_candleStickChartFragment)
         }
+
+        binding.bubbleChartBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_bubbleChartFragment)
+        }
     }
 
     override fun onDestroyView() {
