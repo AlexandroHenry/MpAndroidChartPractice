@@ -22,27 +22,51 @@
         <action
             android:id="@+id/action_HomeFragment_to_barChartFragment"
             app:destination="@id/barChartFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_barChartGroupedSetFragment"
+            app:destination="@id/barChartGroupedSetFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_horizontalBarChartFragment"
+            app:destination="@id/horizontalBarChartFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_combinedChartFragment"
+            app:destination="@id/combinedChartFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/LineChartFragment"
         android:name="com.ret.mpandroidchartpractice.view.LineChartFragment"
-        android:label="@string/second_fragment_label"
+        android:label="라인 차트"
         tools:layout="@layout/fragment_line_chart"/>
     <fragment
         android:id="@+id/cubicLineChartFragment"
         android:name="com.ret.mpandroidchartpractice.view.CubicLineChartFragment"
-        android:label="fragment_cubic_line_chart"
+        android:label="다양한 라인차트"
         tools:layout="@layout/fragment_cubic_line_chart" />
     <fragment
         android:id="@+id/pieFragment"
         android:name="com.ret.mpandroidchartpractice.view.PieFragment"
-        android:label="fragment_pie"
+        android:label="파이 차트"
         tools:layout="@layout/fragment_pie" />
     <fragment
         android:id="@+id/barChartFragment"
         android:name="com.ret.mpandroidchartpractice.view.BarChartFragment"
-        android:label="fragment_bar_chart"
+        android:label="막대 차트"
         tools:layout="@layout/fragment_bar_chart" />
+    <fragment
+        android:id="@+id/barChartGroupedSetFragment"
+        android:name="com.ret.mpandroidchartpractice.view.BarChartGroupedSetFragment"
+        android:label="fragment_bar_chart_grouped_set"
+        tools:layout="@layout/fragment_bar_chart_grouped_set" />
+    <fragment
+        android:id="@+id/horizontalBarChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.HorizontalBarChartFragment"
+        android:label="fragment_horizontal_bar_chart"
+        tools:layout="@layout/fragment_horizontal_bar_chart" />
+    <fragment
+        android:id="@+id/combinedChartFragment"
+        android:name="com.ret.mpandroidchartpractice.view.CombinedChartFragment"
+        android:label="fragment_combined_chart"
+        tools:layout="@layout/fragment_combined_chart" />
 
 </navigation>

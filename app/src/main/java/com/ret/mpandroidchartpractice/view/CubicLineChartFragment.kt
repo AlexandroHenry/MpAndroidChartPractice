@@ -45,7 +45,7 @@ class CubicLineChartFragment : Fragment() {
                     entryList.add(Entry(index.toFloat(), d.toFloat()))
                 }
 
-                val lineDataSet = LineDataSet(entryList, "Data Set").apply {
+                lineDataSet = LineDataSet(entryList, "Data Set").apply {
                     description.text = "data1"
                     circleRadius = 6.0F
                     circleHoleRadius = 3.0F

@@ -45,6 +45,18 @@ class HomeFragment : Fragment() {
         binding.barChartBtn.setOnClickListener {
             findNavController().navigate(R.id.action_HomeFragment_to_barChartFragment)
         }
+
+        binding.barChartGroupedSetBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_barChartGroupedSetFragment)
+        }
+
+        binding.horizontalBarChartBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_horizontalBarChartFragment)
+        }
+
+        binding.combindedChartBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_combinedChartFragment)
+        }
     }
 
     override fun onDestroyView() {

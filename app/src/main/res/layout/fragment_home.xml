@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/green"
-            android:text="Line Chart"
+            android:text="Multi Line Chart"
             android:textColor="@color/white"
             android:textSize="24dp" />
 
@@ -58,6 +58,45 @@
             android:layout_height="wrap_content"
             android:background="@color/green"
             android:text="Bar 차트"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/barChartGroupedSetBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:text="Bar 차트 (Grouped set)"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/horizontalBarChartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:text="Horizontal Bar 차트"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/combindedChartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:text="Combined 차트"
             android:textColor="@color/white"
             android:textSize="24dp" />
 
